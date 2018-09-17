@@ -12,7 +12,15 @@ module.exports = {
   module: {
 
     rules: [
-      // configurations for loaders will go here!
+
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+
     ]
 
   },
@@ -24,7 +32,7 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     })
-    
+
   ]
 
 };
